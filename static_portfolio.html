@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamouche Abdelkrim Portfolio</title>
+
+    <!-- ===== INLINE CSS (STATIC) ===== -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* HEADER */
+        .l-header {
+            width: 100%;
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .nav__logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav__menu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav__menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* HOME */
+        .home {
+            padding-top: 100px;
+            text-align: center;
+            background: #eee;
+            padding-bottom: 60px;
+        }
+
+        .home__title {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .home__img {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        /* SECTION TITLE */
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about__container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about__img {
+            flex: 1;
+            min-width: 250px;
+            background: #ddd;
+            height: 250px;
+        }
+
+        .about__subtitle {
+            font-size: 26px;
+        }
+
+        /* SKILLS */
+        .skills__box span {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #111;
+            color: white;
+            border-radius: 6px;
+            margin: 5px;
+        }
+
+        .skills__img {
+            width: 300px;
+            height: 200px;
+            background: #ccc;
+        }
+
+        /* CONTACT */
+        .contact__container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact__form input, 
+        .contact__form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .contact__button {
+            background: #111;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #111;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer__container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer__title {
+            font-size: 20px;
+        }
+
+        .footer__link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="l-header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Hamouche Abdelkrim</a>
+            <div class="nav__menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li> <!-- Portfolio removed -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="l-main">
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+            <div class="home__img"></div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container">
+                <div class="about__img"></div>
+                <div>
+                    <h2 class="about__subtitle">I'm Hamouche Abdelkrim</h2>
+                    <span>Full Stack Developer</span>
+                    <p>Hamouche Abdelkrim, 21 years old, Full Stack Developer from University Ferhat Abbas Sétif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills__box">
+                <h3>Development</h3>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SCSS</span>
+                <span>React</span>
+                <span>Vue</span>
+
+                <h3>Design</h3>
+                <span>Figma</span>
+                <span>Adobe XD</span>
+                <span>Photoshop</span>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container">
+                <div>
+                    <h3>EMAIL</h3>
+                    <span>koukihamouche@gmail.com</span><br><br>
+                    <h3>PHONE</h3>
+                    <span>0541975808</span><br><br>
+                    <h3>ADDRESS</h3>
+                    <span>Algeria</span>
+                </div>
+
+                <form class="contact__form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea rows="8" placeholder="Message"></textarea>
+                    <input type="submit" value="Send" class="contact__button">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div>
+                <h2 class="footer__title">Hamouche Abdelkrim</h2>
+                <p>This is my personal website.</p>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Explore</h2>
+                <a href="#home" class="footer__link">Home</a>
+                <a href="#about" class="footer__link">About</a>
+                <a href="#skills" class="footer__link">Skills</a>
+                <a href="#contact" class="footer__link">Contact</a>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Follow</h2>
+                <p>Facebook | Instagram | Twitter</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
