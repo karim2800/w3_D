@@ -3,214 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- ===== BOX ICONS ===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
     <title>Hamouche Abdelkrim Portfolio</title>
+
+    <!-- ===== INLINE CSS (STATIC) ===== -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* HEADER */
+        .l-header {
+            width: 100%;
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .nav__logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav__menu ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav__menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* HOME */
+        .home {
+            padding-top: 100px;
+            text-align: center;
+            background: #eee;
+            padding-bottom: 60px;
+        }
+
+        .home__title {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .home__img {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        /* SECTION TITLE */
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* ABOUT */
+        .about__container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about__img {
+            flex: 1;
+            min-width: 250px;
+            background: #ddd;
+            height: 250px;
+        }
+
+        .about__subtitle {
+            font-size: 26px;
+        }
+
+        /* SKILLS */
+        .skills__box span {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #111;
+            color: white;
+            border-radius: 6px;
+            margin: 5px;
+        }
+
+        .skills__img {
+            width: 300px;
+            height: 200px;
+            background: #ccc;
+        }
+
+        /* CONTACT */
+        .contact__container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact__form input, 
+        .contact__form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        .contact__button {
+            background: #111;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #111;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer__container {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer__title {
+            font-size: 20px;
+        }
+
+        .footer__link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0;
+        }
+    </style>
 </head>
+
 <body>
-    <!--===== HEADER =====-->
+
+    <!-- HEADER -->
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Hamouche Abdelkrim</a>
-            </div>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <nav class="nav">
+            <a href="#" class="nav__logo">Hamouche Abdelkrim</a>
+            <div class="nav__menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li> <!-- Portfolio removed -->
                 </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main class="l-main">
-        <!--===== HOME =====-->
+
+        <!-- HOME -->
         <section class="home" id="home">
-            <div class="home__container bd-grid">
-                <h1 class="home__title"><span>HE</span><br>LLO.</h1>
-
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
-                </div>
-
-                <img src="assets/img/perfil.png" alt="" class="home__img">
-            </div>
+            <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+            <div class="home__img"></div>
         </section>
-        
-        <!--===== ABOUT =====-->
+
+        <!-- ABOUT -->
         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/perfil.png" alt="">
-                </div>
-
+            <div class="about__container">
+                <div class="about__img"></div>
                 <div>
                     <h2 class="about__subtitle">I'm Hamouche Abdelkrim</h2>
-                    <span class="about__profession">Full Stack Developer</span>
-                    <p class="about__text">Hamouche Abdelkrim, Full Stack Developer, 21 years old, graduated from University Ferhat Abbas Setif. Full Stack Developer.</p>
-
-                    <div class="about__social">
-                        <a href="#" class="about__social-icon"><i class='bx bxl-linkedin'></i></a>
-                        <a href="#" class="about__social-icon"><i class='bx bxl-github'></i></a>
-                        <a href="#" class="about__social-icon"><i class='bx bxl-dribbble'></i></a>
-                    </div>
+                    <span>Full Stack Developer</span>
+                    <p>Hamouche Abdelkrim, 21 years old, Full Stack Developer from University Ferhat Abbas Sétif.</p>
                 </div>
             </div>
         </section>
 
-        <!--===== SKILLS =====-->
+        <!-- SKILLS -->
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
+            <div class="skills__box">
+                <h3>Development</h3>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SCSS</span>
+                <span>React</span>
+                <span>Vue</span>
 
-            <div class="skills__container bd-grid">
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Development</h3>
-                    <span class="skills__name">HTML</span>
-                    <span class="skills__name">CSS</span>
-                    <span class="skills__name">JavaScript</span>
-                    <span class="skills__name">SCSS</span>
-                    <span class="skills__name">React</span>
-                    <span class="skills__name">Vue</span>
-
-                    <h3 class="skills__subtitle">Design</h3>
-                    <span class="skills__name">Figma</span>
-                    <span class="skills__name">Adobe XD</span>
-                    <span class="skills__name">Photoshop</span>
-                </div>
-
-                <div class="skills__img">
-                    <img src="assets/img/skill.jpg" alt="">
-                </div>
+                <h3>Design</h3>
+                <span>Figma</span>
+                <span>Adobe XD</span>
+                <span>Photoshop</span>
             </div>
         </section>
 
-        <!--===== PORTFOLIO =====-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">Portfolio</h2>
-
-            <div class="portfolio__container bd-grid">
-                <div class="portfolio__img">
-                    <img src="assets/img/work1.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work2.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work3.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work4.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work5.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work6.jpg" alt="">
-
-                    <div class="portfolio__link">
-                        <a href="#" class="portfolio__link-name">View details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--===== CONTACT =====-->
+        <!-- CONTACT -->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
 
-            <div class="contact__container bd-grid">
-                <div class="contact__info">
-                    <h3 class="contact__subtitle">EMAIL</h3>
-                    <span class="contact__text">koukihamouche@gmail.com</span>
-
-                    <h3 class="contact__subtitle">PHONE</h3>
-                    <span class="contact__text">0541975808</span>
-
-                    <h3 class="contact__subtitle">ADDRESS</h3>
-                    <span class="contact__text">Algeria</span>
+            <div class="contact__container">
+                <div>
+                    <h3>EMAIL</h3>
+                    <span>koukihamouche@gmail.com</span><br><br>
+                    <h3>PHONE</h3>
+                    <span>0541975808</span><br><br>
+                    <h3>ADDRESS</h3>
+                    <span>Algeria</span>
                 </div>
 
-                <form action="" class="contact__form">
-                    <div class="contact__inputs">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="email" placeholder="Email" class="contact__input">
-                    </div>
-
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
+                <form class="contact__form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea rows="8" placeholder="Message"></textarea>
                     <input type="submit" value="Send" class="contact__button">
                 </form>
             </div>
         </section>
+
     </main>
 
-    <!--===== FOOTER =====-->
-    <footer class="footer section">
-        <div class="footer__container bd-grid">
-            <div class="footer__data">
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div>
                 <h2 class="footer__title">Hamouche Abdelkrim</h2>
-                <p class="footer__text">I'm Hamouche Abdelkrim and this is my personal website</p>
+                <p>This is my personal website.</p>
             </div>
 
-            <div class="footer__data">
+            <div>
                 <h2 class="footer__title">Explore</h2>
-                <ul>
-                    <li><a href="#home" class="footer__link">Home</a></li>
-                    <li><a href="#about" class="footer__link">About</a></li>
-                    <li><a href="#skills" class="footer__link">Skills</a></li>
-                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
-                    <li><a href="#contact" class="footer__link">Contact</a></li>
-                </ul>
+                <a href="#home" class="footer__link">Home</a>
+                <a href="#about" class="footer__link">About</a>
+                <a href="#skills" class="footer__link">Skills</a>
+                <a href="#contact" class="footer__link">Contact</a>
             </div>
 
-            <div class="footer__data">
+            <div>
                 <h2 class="footer__title">Follow</h2>
-                <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <p>Facebook | Instagram | Twitter</p>
             </div>
+
         </div>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
